@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+      body {
+        background: #1e272e;
+        color: white;
+        text-align: center;
+      }
+      /* Navbar Styling */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background: #485460;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      .navbar .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #feca57;
+      }
+      .navbar .nav-links {
+        list-style: none;
+        display: flex;
+      }
+      .navbar .nav-links li {
+        margin: 0 15px;
+      }
+      .navbar .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+      .navbar .nav-links a:hover {
+        color: #feca57;
+      }
+      /* Hero Section */
+      .hero {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        color: #d1ccc0;
+      }
+      .cta-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        background: #d63031;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+      }
+      .cta-button:hover {
+        background: #ff7675;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">📖 Library</div>
+      <ul class="nav-links">
+        <li><a href="/student/books">Browse Books</a></li>
+        <li><a href="/admin/login">Admin Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Welcome to the Library</h1>
+      <p>
+        Explore a vast collection of books and manage your library with ease.
+      </p>
+      <button
+        class="cta-button"
+        onclick="window.location.href='/student/books'"
+      >
+        📚 Browse Books
+      </button>
+    </section>
+  </body>
+</html>

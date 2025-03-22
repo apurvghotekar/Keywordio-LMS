@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Available Books</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: #1e272e;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      .book-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .book-card {
+        background: #485460;
+        margin: 15px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        width: 280px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .book-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+      }
+      .book-card h3 {
+        margin: 10px 0;
+        color: #feca57;
+      }
+      .book-card p {
+        margin: 5px 0;
+        font-size: 1.1rem;
+      }
+      .go-back {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        background: #d63031;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+      }
+      .go-back:hover {
+        background: #ff7675;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📚 Available Books 📚</h1>
+    <div class="book-list">
+      {% for book in books %}
+      <div class="book-card">
+        <h3>{{ book.title }}</h3>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+        <p><strong>Copies:</strong> {{ book.available_copies }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <button class="go-back" onclick="window.history.back()">⬅ Go Back</button>
+  </body>
+</html>
